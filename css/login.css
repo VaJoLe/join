@@ -1,0 +1,394 @@
+@import url('./login_animation.css');
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-color: rgb(246, 247, 248);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  overflow: hidden;
+}
+
+.header-btn-container {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  display: flex;
+  gap: 35px;
+  max-width: 280px;
+  max-height: 49px;
+  background: rgb(246,247,248);
+}
+
+.header-btn-container button {
+  border: unset;
+  font-weight: bold;
+}
+
+.header-btn-container button:first-child {
+  background-color: rgb(246,247,248);
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.header-btn-container a {
+  display: flex;
+  background-color: rgba(42, 54, 71);
+  padding: 15px 16px;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 125ms;
+}
+
+.header-btn-container a:hover {
+  background-color: rgb(41, 171, 226);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.entry-modal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  max-width: 550px;
+  max-height: 518px;
+  width: 100%;
+  padding: 40px 10px;
+  gap: 32px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 422px;
+}
+
+.modal-content h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.modal-content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content .underline-headline {
+  border: 3px solid rgba(41, 171, 226, 1);
+  width: 100%;
+  max-width: 100px;
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.input-group input {
+  display: flex;
+  width: 100%;
+  padding: 10px 21px 10px 21px;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(209, 209, 209);
+  font-size: 1.125rem;
+}
+
+.input-group input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.input-group img {
+  position: absolute;
+  top: 24px;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 20px;
+}
+
+.visibilty-btn {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+  border: 1.8px solid rgba(41, 171, 226, 1);
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.8125rem;
+  margin-top: 8px;
+  opacity: 0;
+}
+
+.msg-login-successful {
+  font-size: 1.125rem;
+  color: greenyellow;
+  font-weight: bold;
+}
+
+label {
+  padding-left: 56px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.entry-btn-container {
+  margin-top: 15px;
+  display: flex;
+  gap: clamp(16px, 10vw, 40px);
+  justify-content: center;
+}
+
+.entry-btn-container button {
+  cursor: pointer;
+}
+
+.entry-btn {
+  border: unset;
+  background-color: rgb(42, 54, 71);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 125ms;
+  white-space: nowrap;
+}
+
+.entry-btn:hover {
+  background-color: rgb(41, 171, 226);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.entry-btn.disabled:hover {
+  background-color: rgb(42, 54, 71);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.btn-guest-entry {
+  border: unset;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid black;
+  transition: color 125ms;
+  transition: border 125ms;
+  background-color: white;
+  color: black;
+  white-space: nowrap;
+}
+
+.btn-guest-entry:hover {
+  color: rgb(41, 171, 226);
+  border: 1px solid rgb(41, 171, 226);
+}
+
+footer {
+  position: absolute;
+  bottom: 24px;
+}
+
+footer div {
+  display: flex;
+  gap: 24px;
+}
+
+footer a {
+  font-size: 14px;
+  color: rgb(168, 168, 168);
+}
+
+footer a:hover {
+  color: rgb(41, 171, 226);
+  transform: scale(1.04);
+}
+
+.dialog-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+}
+
+label span {
+  font-size: 0.875rem;
+}
+
+.form-checkbox {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  border-radius: 2px;
+  margin-right: 8px;
+  transition: background-color 0.3s;
+}
+
+.form-checkbox:checked {
+  background-color: rgb(0, 177, 255);
+}
+
+.form-checkbox:not(:checked) {
+  border: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+.form-checkbox:checked::after {
+  content: '✔';
+  color: rgb(255, 255, 255);
+  font-size: 0.625rem;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -53%);
+}
+
+.legal-text {
+  color: rgb(169, 169, 169);
+}
+
+.legal-link {
+  color: rgb(41, 171, 226);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.legal-link:hover {
+  text-decoration: underline;
+}
+
+.color-red {
+  color: red;
+}
+
+.padding-left-0 {
+  padding-left: 0px;
+}
+
+.confirm-password {
+  margin-bottom: 8px;
+}
+
+.error-signup-msg {
+  color: red;
+  font-size: 13px;
+  position: absolute;
+}
+
+.back-sign-up{
+  position: absolute;
+  left: 25px;
+  top: 50px;
+}
+
+.padding-top-2 {
+  padding-top: 2px;
+}
+
+@media screen and (min-width: 1921px) {
+  .section_pad {
+    padding: 64px max(160px, calc(50% - 960px));
+  }
+  .section-gap {
+    gap: 64px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  #header-div {
+    display: flex;
+  }
+  #navbar-div {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-animation {
+    animation: moveToCornerMobile 1000ms linear forwards;
+  }
+  .logo {
+    width: 40px;
+    height: 50px;
+    top: 16px;
+    left: 30px;
+  }
+  .header-btn-container {
+    position: absolute;
+    top: auto;
+    bottom: 75px;
+    right: auto;
+    left: auto;
+  }
+  .header-btn-container button:first-child {
+    font-size: 18px;
+  }
+  .header-btn-container a {
+    padding: 12px 13px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .entry-btn-container{
+    gap: 30px;
+  }
+
+  .btn-guest-entry{
+    padding: 5px;
+  }
+
+  .entry-btn{
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1921px) {
+  .body {
+    background-color: rgb(246,247,248);
+  }
+}

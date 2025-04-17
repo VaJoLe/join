@@ -1,0 +1,82 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'inter';
+}
+
+.max-width-1440 {
+  max-width: 1440px;
+}
+
+.max-display-size {
+  max-width: 1440px;
+  max-height: 1024px;
+}
+
+.d-flex-c-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-flex-sb-c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-flex-fs-c {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.d-flex-se-c {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.d-flex-col-c-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-none {
+  display: none;
+}
+
+.overflow.hidden {
+  overflow: hidden;
+}
+
+/* Gesamter Scrollbalken */
+::-webkit-scrollbar {
+  width: 12px; /* Breite des Scrollbalkens */
+  background-color: transparent; /* Hintergrundfarbe */
+}
+
+/* Scroll-Leiste (Thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Farbe der Scroll-Leiste */
+  border-radius: 6px; /* Abgerundete Ecken */
+  border: 2px solid rgb(240,240,240); /* Abstand zur Scroll-Leiste */
+  height: 20px;
+}
+
+/* Hover-Effekt für die Scroll-Leiste */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Farbe beim Hover */
+}
+
+/* Scrollbalken für horizontale Leisten */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Hintergrund der Track-Leiste */
+  border-radius: 6px;
+}
+
+

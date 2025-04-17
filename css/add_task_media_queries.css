@@ -1,0 +1,92 @@
+@media (max-width: 900px) {
+  form {
+    display: block;
+  }
+
+  .required-note {
+    padding-bottom: 30px;
+    position: relative;
+    z-index: 15;
+    background-color: rgb(246, 247, 248);
+    padding: 5px;
+    margin-top: 50px;
+    margin-bottom: 200px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .clear-create-button-container {
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    margin-right: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
+    z-index: 16;
+    background-color: rgb(246, 247, 248);
+    width: 100%;
+  }
+
+  .subtask-list-group .subtask-list-icons {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .task-button {
+    padding: 10px 12px;
+  }
+
+  .add-task-message {
+    font-size: 12px;
+  }
+
+  .add-task-message img {
+    height: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .clear-button {
+    margin-bottom: 8px;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  .task-button {
+    width: 100%;
+  }
+
+  section button {
+    margin-bottom: 16px;
+  }
+
+  main h1 {
+    padding: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .clear-create-button-container {
+    flex-direction: column;
+    align-items: flex-end;
+    bottom: 90px;
+  }
+}
+
+@media (min-width: 900) {
+  .subtask-container {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 900px) and (min-height: 1300px) {
+  .clear-create-button-container {
+    top: 1100px;
+    bottom: 0;
+  }
+}

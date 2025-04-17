@@ -1,0 +1,27 @@
+.slide-in {
+    animation: slide-in 150ms linear forwards;
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translate(50%, -50%);
+    }
+  
+    100% {
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  .slide-out {
+    animation: slide-out 150ms linear forwards;
+  }
+  
+  @keyframes slide-out {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+  
+    100% {
+      transform: translate(50%, -50%);
+    }
+  }
